@@ -10,6 +10,7 @@ const Header = ({page_title}) => {
 
     // To determine which page style to impliment based on the page title
       const pane = page_title ? page_title+" PAGE" : "PAGE TITLE"
+      console.log(page_title+"page title")
     
       // Event Listerner Toggle the Nav menu to show when button is click
       const menuToggle = () => {
@@ -72,8 +73,8 @@ const Header = ({page_title}) => {
             {/* <!-- Navigation menu -->       */}
             <nav aria-label="Primary" className="navigation  m-hide">
               <ul className="menu">
-                <li><Link to="/">BLOG</Link></li>
-                <li><Link to="/">Shop</Link>
+                <li><Link to="/">Blog</Link></li>
+                <li><Link to="https://winehub.netlify.app" target="_blank">Shop</Link>
                   <ul className="submenu">
                     <li><Link to="/">Dessert Wine</Link></li>
                     <li><Link to="/">Red Wine</Link></li>
@@ -87,7 +88,7 @@ const Header = ({page_title}) => {
     
           {/* <!-- Page Title --> */}
           <div className="page-title">
-            <h2>{pane}</h2>
+            <h2>{page_title}</h2>
           </div>
         </header>
       )

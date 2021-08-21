@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import post_image from '../images/default_image.jpg'
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -11,11 +11,14 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} myClass="post-main">
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <img src={post_image} alt="Post Image" className="post-image" height="30" style={{
+        paddingRight: 20,
+      }}/>
       <article
         className="blog-post"
         itemScope
@@ -30,9 +33,9 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
+        {/* <footer>
           <Bio />
-        </footer>
+        </footer> */}
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -44,7 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-          <li>
+          {/* <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
@@ -57,7 +60,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 {next.frontmatter.title} →
               </Link>
             )}
-          </li>
+          </li> */}
         </ul>
       </nav>
     </Layout>
