@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `WINE HUB Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Tata Chuchill Awah`,
+      summary: `From websiteoracle.com`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://websiteoracle.com`,
     social: {
       twitter: `kylemathews`,
     },
@@ -140,6 +140,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
-// module.exports = {
-//   plugins: [`gatsby-plugin-fontawesome-css`],
-// }
+

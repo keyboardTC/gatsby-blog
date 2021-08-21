@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <img src={post_image} alt="Post Image" className="post-image" height="30" style={{
+      <img src={post_image} alt="Post Image" className="post-image"  style={{
         paddingRight: 20,
       }}/>
       <article

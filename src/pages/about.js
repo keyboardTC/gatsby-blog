@@ -2,9 +2,6 @@ import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
-import {container, heading} from './about.module.scss'
 import post_image from '../images/tc.jpg'
 
 
@@ -13,7 +10,7 @@ const About = ({ data, location }) => {
     // const siteTitle = data.site.siteMetadata?.title || `Title`
   
     return (
-      <Layout location={location}  className={container} title={siteTitle} >
+      <Layout location={location}  title={siteTitle} >
          {/* <h1  className={heading}>About Page</h1> */}
          <section style={{display:"flex", gap:20,}}>
             <img src={post_image} alt="Post Image" className="post-image" style={{height:200,}}/>
