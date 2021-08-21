@@ -123,8 +123,23 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-fontawesome-css`,
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'material icons',
+          'roboto:300,400,500,700',
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
 }
+// module.exports = {
+//   plugins: [`gatsby-plugin-fontawesome-css`],
+// }
