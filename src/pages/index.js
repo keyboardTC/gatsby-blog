@@ -35,7 +35,7 @@ const BlogIndex = ({ data, location }) => {
 
               return (
                   <article  className="post_block" itemScope itemType="http://schema.org/Article" key={post.fields.slug} >
-                    <img src={post_image} alt="Post Image" className="post-image" />
+                    <img src={post.frontmatter.image} alt="Post Image" className="post-image" />
                     <div class="post_desc" >
                         <header>
                           <h2>
@@ -79,6 +79,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image
         }
       }
     }

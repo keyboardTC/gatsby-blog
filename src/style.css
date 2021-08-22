@@ -170,9 +170,12 @@
   padding-bottom: 1.5em;
   border-bottom: 1px solid var(--alt-text-color);
 }
+.page-footer{
+  margin-top: 8em;
+}
 /*============================ footer end ========================================*/
 
-/* =================== post blog ============================================== */
+/* =========================== post blog ============================================== */
 .post_block{
   box-shadow:5px 50px 50px 5px rgb(0, 0, 0); 
   padding: 2em;
@@ -314,7 +317,6 @@
   /* <================== Footer styling =================> */
     .page-footer{
         background-color: var(--secondary-on);
-
     }
     .sidebar{
         margin-top: 1em;

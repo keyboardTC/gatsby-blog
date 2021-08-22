@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <img src={post_image} alt="Post Image" className="post-image"  style={{
+      <img src={data.markdownRemark.frontmatter.image} alt="Post Image" className="post-image"  style={{
         paddingRight: 20,
       }}/>
       <article
@@ -47,7 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-          {/* <li>
+          <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
@@ -60,7 +60,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 {next.frontmatter.title} →
               </Link>
             )}
-          </li> */}
+          </li>
         </ul>
       </nav>
     </Layout>
@@ -88,6 +88,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
